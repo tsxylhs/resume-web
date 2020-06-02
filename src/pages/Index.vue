@@ -1,357 +1,421 @@
 <template lang="pug">
-  .w-100
-    .banner
-      .header-top
-        .container
-          .header-top-right
-            p
-              i.fa.fa-envelope(aria-hidden='true')
-              a(href='mailto:info@example.com') info@example1.com
-            p
-              i.fa.fa-phone(aria-hidden='true')
-              |  +1 234 567 8901
-      .head
-        .container
-          .navbar-top
-            // Brand and toggle get grouped for better mobile display
+  html
+    head
+    body#page-top(data-spy='scroll', data-target='.navbar-fixed-top')
+      // Header
+      header.intro
+        .intro-body
+          .container
+            .row
+              .intro-text
+                h1 你好, 我是吕厚帅
+                p 全栈工程师 & 大学本科（统招，学信网可查）
+                a.btn.btn-default.btn-lg.page-scroll(href='#about') 关于我
+                a.btn.btn-default.btn-lg.page-scroll(href='#portfolio') 我的项目经验
+      // Navigation
+      #nav
+        nav.navbar.navbar-custom
+          .container
             .navbar-header
-              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-                span.sr-only 切换导航
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-              .navbar-brand.logo
-                h1.animated.wow.pulse(data-wow-delay='.5s')
-                  a(href='index.html') 加拿大伊莱顿精英高级中学
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
+                i.fa.fa-bars
+              a.navbar-brand.page-scroll(href='#page-top') 吕厚帅
             // Collect the nav links, forms, and other content for toggling
-            #bs-example-navbar-collapse-1.collapse.navbar-collapse
-              ul.nav.navbar-nav.link-effect-4
-                li.active
-                  a(href='/#/', data-hover='Home') 主页
+            .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+              ul.nav.navbar-nav
+                // Hidden li included to remove active class from about link when scrolled up past about section
+                li.hidden
+                  a(href='#page-top')
                 li
-                  a(href='/#/about', data-hover='About') 关于我们
+                  a.page-scroll(href='#about') 关于我
                 li
-                  a(href='/#/gallery', data-hover='Gallery') 校园文化
-                li.dropdown
-                  a.dropdown-toggle(href='#', data-hover='Pages', data-toggle='dropdown')
-                    | 导航
-                    b.caret
-                  ul.dropdown-menu
-                    li
-                      a(href='') 校园文化
-                    li
-                      a(href='') 课程介绍
+                  a.page-scroll(href='#services') 知识技能
                 li
-                  a(href='/#/contact', data-hover='Contact') 联系我们
-            // /.navbar-collapse
-          .clearfix
-      .bannerinfo
+                  a.page-scroll(href='#portfolio') 项目经验
+                li
+                  a.page-scroll(href='#resume') 工作经验
+                li
+                  a.page-scroll(href='#skills') 兴趣爱好
+                li
+                  a.page-scroll(href='#testimonials') 自我介绍
+                li
+                  a.page-scroll(href='#contact') 联系我
+      // About Section
+      #about
         .container
-          .col-md-5.bannergrid
-            .top
-              h5
-              h2 教育是强大的武器
-            .bottom
-              .col-md-6.bannergrid1.clr
-                i.fa.fa-book(aria-hidden='true')
-                h4 学习
-                .clearfix
-                p 学习是获得新知识的行为
-              .col-md-6.bannergrid1.clr1
-                i.fa.fa-graduation-cap(aria-hidden='true')
-                h4 教育
-                .clearfix
-                p 一次极有启发性的体验
-              .clearfix
-              .col-md-6.bannergrid1.clr2
-                i.fa.fa-pencil(aria-hidden='true')
-                h4 研究
-                .clearfix
-                p 阅读是一个复杂的认知过程
-              .col-md-6.bannergrid1.clr3
-                i.fa.fa-university(aria-hidden='true')
-                h4 大学
-                .clearfix
-                p 高等教育机构
-              .clearfix
-              .col-md-6.bannergrid1.clr4
-                i.fa.fa-bicycle(aria-hidden='true')
-                h4 考试
-                .clearfix
-                p 测试学生的知识
-              .col-md-6.bannergrid1.clr5
-                i.fa.fa-cog(aria-hidden='true')
-                h4 结果
-                .clearfix
-                p 要有丰富的经验
-              .clearfix
+          .section-title.text-center.center
+            h2 关于我
+            hr
+          .row
+            .col-md-12.text-center
+              img.img-responsive(src='../img/about.jpg')
+            .col-md-8.col-md-offset-2
+              .about-text
+                p
+                  | 你好，我一八年毕业，一七年九月份开始在北京零代码(科技有限公司）实习，主要工作是一些大数据组件的调研，公司有自己封装的大数据产品，和trinity(ETL工具)的技术支持
+                p
+                  | 一八年毕业后辞去零代码工作，来到上海入职一家创业公司，开启全栈工程师之路。
+                p.text-center
+                  a.btn.btn-primary(href='#')
+                    i.fa.fa-download
+                    |  下载我的简历
+      // Services Section
+      #services.text-center
+        .container
+          .section-title.center
+            h2 知识技能
+            hr
+          .space
+          .row
+            .col-md-3.col-sm-6.service
+              i.fa.fa-laptop
+              h4 Vue
+              p
+                |  熟练使用Vue脚手手架，js类库。Element 框架
+            .col-md-3.col-sm-6.service
+              i.fa.fa-code
+              h4 微信小程序
+              p
+                | 使用vant框架，搭建小程序，熟悉微信提供接口，对接小程序平台接口，例如支付，登录，获取位置。获取手机号。等等
+            .col-md-3.col-sm-6.service
+              i.fa.fa-rocket
+              h4 Golang
+              p
+                | 入职公司后百分之八十项目后台由golang搭建，熟悉xorm框架，gin框架，及templateHtml渲染
+            .col-md-3.col-sm-6.service
+              i.fa.fa-bullhorn
+              h4 Java
+              p
+                | 本命语言之一，熟悉springboot框架，持久层框架MyBatis，Java基础.
+      // Portfolio Section
+      #portfolio
+        .container
+          .section-title.text-center.center
+            h2 我的项目经验
+            hr
             .clearfix
-    // //banner
-    // welcome
-    .welcome
-      .container
-        .welcome-grids
-          .col-md-6.welcome-w3right
-            img.img-responsive(src='../../static/images/welcome.jpg', alt='')
-            .wthree-model-video
-              a(class='#', data-toggle='modal', data-target='#myModal1')
-                span.glyphicon.glyphicon-play-circle(aria-hidden='true')
-          .col-md-6.welcome-w3left
-            h3 但是在某些情况下，所有的痛苦都在恋爱中？
-            h4
-              | 快乐是避免每一个痛苦的方法。
-              | 但是在某些情况下
             p
-              | 快乐是每一个痛苦的避免。
-              | 但在某些情况下，和睦相处，或避免享乐
-              | saepe.Nam空闲时间的义务，当我们选择力量时选择
-              | 没有受到它的干​​扰，所以我们也许能够做到他最满意的
-            .readmore-w3
-              a.readmore(href='#', data-toggle='modal', data-target='#myModal1') View More
-          .clearfix
-
-    // book1
-    .book.book1.jarallax
-      .container
-        h3 教育是最强大的武器，您可以用来
-        h3 改变世界.
-        p 教育的功能是教人们进行沉思和批判性思考。 智力加品格-这是真正的教育目标。 教育是一种启发性的经历
-    // //book1
-    // <div class="tlinks">Collect from <a href="http://www.cssmoban.com/" ></a></div>
-    // Education
-    .education
-      h3.heading 我们的教育过程
-      .container
-        .col-md-4.eduleft
-          .left1
-            h3 学习
-            p 学习技能
-            span.glyphicon.glyphicon-adjust(aria-hidden='true')
-          .left1
-            h3 知识
-            p 学历
-            span.glyphicon.glyphicon-adjust(aria-hidden='true')
-          .left1
-            h3 教学
-            p 实际理解
-            span.glyphicon.glyphicon-adjust(aria-hidden='true')
-          .left1
-            h3 讨论区
-            p 交换想法
-            span.glyphicon.glyphicon-adjust(aria-hidden='true')
-        .col-md-8.eduright
-          .right1
-            h3 促进学习
-            p
-              | 快乐是每一个痛苦的避免。
-              | 但在某些情况下，和睦相处，或避免享乐
-              | saepe.Nam空闲时间的义务，当我们选择力量时选择
-              | 没有受到它的干​​扰，所以我们也许能够做到他最满意的
-          .right1
-            h3 知识的获取
-            p 鞭挞或呵斥是应该谨慎地避免的。它只是弥缝了目前，使伤口结上一层皮膜，对于痛楚的核心仍然没有触到。只有出自内心的羞耻心和不愿见恶于人的畏惧心，才是一种真正的约束。
-          .right1
-            h3 教学科目
-            p 鞭挞或呵斥是应该谨慎地避免的。它只是弥缝了目前，使伤口结上一层皮膜，对于痛楚的核心仍然没有触到。只有出自内心的羞耻心和不愿见恶于人的畏惧心，才是一种真正的约束。
-          .right1
-            h3 小组讨论
-            p 鞭挞或呵斥是应该谨慎地避免的。它只是弥缝了目前，使伤口结上一层皮膜，对于痛楚的核心仍然没有触到。只有出自内心的羞耻心和不愿见恶于人的畏惧心，才是一种真正的约束。
-        .clearfix
-    // //Education
-    // book
-    .book.jarallax
-      .container
-        h3 我们努力为每个学生准备成人生活
-        h3 美好成功的未来
-        p 鞭挞或呵斥是应该谨慎地避免的。它只是弥缝了目前，使伤口结上一层皮膜，对于痛楚的核心仍然没有触到。只有出自内心的羞耻心和不愿见恶于人的畏惧心，才是一种真正的约束。
-        .readmore-w3
-          ul
-            li
-              a.readmore(href='#', data-toggle='modal', data-target='#myModal2') Get Started
-            li
-              a.readmore(href='#', data-toggle='modal', data-target='#myModal3') Register
-    // //book
-    // clients
-    #clients.clients
-      .container
-        h3.heading 我们的学生说的是
-        .wmuSlider.example1.animated.wow.slideInUp(data-wow-delay='.5s')
-          .wmuSliderWrapper
-            div(style='position: absolute; width: 100%; opacity: 0;')
-              .banner-wrap
-                .col-md-4.client-grids
-                  p 我们有无产阶级道德，我们应该发展它，巩固它，并且以这种无产阶级道德教育未来的一代。
-                  .col-md-5.c-img
-                    img(src='../../static/images/c1.jpg', alt='')
-                  .col-md-7.c-info
-                    h4 测试
-                    h5 测试1
-                  .clearfix
-                .col-md-4.client-grids
-                  p 我们有无产阶级道德，我们应该发展它，巩固它，并且以这种无产阶级道德教育未来的一代。
-                  .col-md-5.c-img
-                    img(src='../../static/images/c2.jpg', alt='')
-                  .col-md-7.c-info
-                    h4 测试2
-                    h5 测试3
-                  .clearfix
-                .col-md-4.client-grids
-                  p 我们有无产阶级道德，我们应该发展它，巩固它，并且以这种无产阶级道德教育未来的一代。
-                  .col-md-5.c-img
-                    img(src='../../static/images/c3.jpg', alt='')
-                  .col-md-7.c-info
-                    h4 测试4
-                    h5 测试4
-                  .clearfix
-                .clearfix
-            //article(style='position: absolute; width: 100%; opacity: 0;')
-              .banner-wrap
-                .col-md-4.client-grids
-                  p 我们有无产阶级道德，我们应该发展它，巩固它，并且以这种无产阶级道德教育未来的一代。
-                  .col-md-5.c-img
-                    img(src='../../static/images/c4.jpg', alt='')
-                  .col-md-7.c-info
-                    h4 测试五
-                    h5 测试五
-                  .clearfix
-                .col-md-4.client-grids
-                  p 我们有无产阶级道德，我们应该发展它，巩固它，并且以这种无产阶级道德教育未来的一代。
-                  .col-md-5.c-img
-                    img(src='../../static/images/c5.jpg', alt='')
-                  .col-md-7.c-info
-                    h4 测试六
-                    h5 测试六
-                  .clearfix
-                .col-md-4.client-grids
-                  p 我们有无产阶级道德，我们应该发展它，巩固它，并且以这种无产阶级道德教育未来的一代。
-                  .col-md-5.c-img
-                    img(src='../../static/images/c6.jpg', alt='')
-                  .col-md-7.c-info
-                    h4 测试七
-                    h5 测试七
-                  .clearfix
-                .clearfix
-    // //clients
-    // contact
-    .contact
-      h3.heading 联系我们
-      p 快乐是每一个痛苦的避免,快乐是每一个痛苦的避免,快乐是每一个痛苦的避免,快乐是每一个痛苦的避免
-      .container
-        .contact-grids
-          .col-md-7.contact-grid.wow.fadeInUp.animated(data-wow-delay='.5s')
-            form(action='#', method='post')
-              input(type='text', placeholder='Name', name='name', required='')
-              input(type='email', placeholder='Email', name='email', required='')
-              .clearfix
-              textarea(placeholder='Message..', name='message', required='')
-              input(type='submit', value='Send Now')
-          .col-md-5.contact-grid.wow.fadeInUp.animated(data-wow-delay='.5s')
-            .call
-              .col-xs-1.contact-grdl
-                span.glyphicon.glyphicon-phone(aria-hidden='true')
-              .col-xs-3.contact-grdr
-                h3 联系我们 :
-              .col-xs-8.contact-grdr
-                ul
-                  li  021-61125609
-                  li  021-61125610
-              .clearfix
-            .call
-              .col-xs-1.contact-grdl
-                span.glyphicon.glyphicon-map-marker(aria-hidden='true')
-              .col-xs-3.contact-grdr
-                h3 地址 :
-              .col-xs-8.contact-grdr
-                ul
-                  li 上海市金山区学府路 1300 号
-                  li 上海市
-              .clearfix
-            .call
-              .col-xs-1.contact-grdl
-                span.glyphicon.glyphicon-envelope(aria-hidden='true')
-              .col-xs-3.contact-grdr
-                h3 邮箱 :
-              .col-xs-8.contact-grdr
-                ul
+              | 项目经验从2017年实习开始，至今共参与大大小小数十个项目代表性项目如下
+          .categories
+            ul.cat
+              li
+                ol.type
                   li
-                    a(href='mailto:info@example.com') info@example.com
-              .clearfix
-          .clearfix
-    // //contact
-    // copyright
-    .copyright
-      .container
-        .copyrighttop
-          ul
-            li
-              h4 跟着我们:
-            li
-              a.facebook(href='#')
-                i.fa.fa-facebook(aria-hidden='true')
-            li
-              a.facebook(href='#')
-                i.fa.fa-twitter(aria-hidden='true')
-            li
-              a.facebook(href='#')
-                i.fa.fa-google-plus(aria-hidden='true')
-            li
-              a.facebook(href='#')
-                i.fa.fa-linkedin(aria-hidden='true')
-        .copyrightbottom
-          p
-            | Copyright © 2017.Company name All rights reserved.More Templates
-            a(href='http://www.cssmoban.com/', target='_blank', title='')
-            |  - Collect from
-            a(href='http://www.cssmoban.com/', title='', target='_blank')
-        .clearfix
-    // //copyright
-    // model-video
-    // Modal5
-    #myModal1.modal.fade(tabindex='-1', role='dialog')
-      .modal-dialog
-        // Modal content
-        .modal-content
-          .modal-header
-            button.close(type='button', data-dismiss='modal') ×
-            iframe(src='https://player.vimeo.com/video/77456946?title=0&byline=0&portrait=0')
-    // //Modal5
-    // //model-video
-    // popup for sign in form
-    #myModal2.modal.video-modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModal1')
-      .modal-dialog(role='document')
-        .modal-content
-          #small-dialog1.mfp-hide.book-form
-            button.close(type='button', data-dismiss='modal', aria-label='Close')
-              span(aria-hidden='true') ×
-            h3 登录
-            form(action='#', method='post')
-              input.email(type='text', name='Email', placeholder='Email', required='')
-              input.password(type='password', name='Password', placeholder='Password', required='')
-              ul
+                    a.active(href='#', data-filter='*') 所有
+                  li
+                    a(href='#', data-filter='.web') web项目
+                  li
+                    a(href='#', data-filter='.app') 小程序项目
+                  li
+                    a(href='#', data-filter='.branding') 大数据项目
+            .clearfix
+          .row
+            .portfolio-items
+              .col-sm-6.col-md-3.col-lg-3.web
+                .portfolio-item
+                  .hover-bg
+                    a(href='../img/portfolio/01.jpg', title='Project description', rel='prettyPhoto')
+                      .hover-text
+                        h4 Project Title
+                        small Web Design
+                        .clearfix
+                        i.fa.fa-search
+                      img.img-responsive(src='../img/portfolio/01.jpg', alt='Project Title')
+              .col-sm-6.col-md-3.col-lg-3.app
+                .portfolio-item
+                  .hover-bg
+                    a(href='../img/portfolio/02.jpg', title='Project description', rel='prettyPhoto')
+                      .hover-text
+                        h4 Project Title
+                        small App Development
+                        .clearfix
+                        i.fa.fa-search
+                      img.img-responsive(src='../img/portfolio/02.jpg', alt='Project Title')
+              .col-sm-6.col-md-3.col-lg-3.web
+                .portfolio-item
+                  .hover-bg
+                    a(href='../img/portfolio/03.jpg', title='Project description', rel='prettyPhoto')
+                      .hover-text
+                        h4 Project Title
+                        small Web Design
+                        .clearfix
+                        i.fa.fa-search
+                      img.img-responsive(src='../img/portfolio/03.jpg', alt='Project Title')
+              .col-sm-6.col-md-3.col-lg-3.web
+                .portfolio-item
+                  .hover-bg
+                    a(href='../img/portfolio/04.jpg', title='Project description', rel='prettyPhoto')
+                      .hover-text
+                        h4 Project Title
+                        small Web Design
+                        .clearfix
+                        i.fa.fa-search
+                      img.img-responsive(src='../img/portfolio/04.jpg', alt='Project Title')
+              .col-sm-6.col-md-3.col-lg-3.app
+                .portfolio-item
+                  .hover-bg
+                    a(href='../img/portfolio/05.jpg', title='Project description', rel='prettyPhoto')
+                      .hover-text
+                        h4 Project Title
+                        small App Development
+                        .clearfix
+                        i.fa.fa-search
+                      img.img-responsive(src='../img/portfolio/05.jpg', alt='Project Title')
+              .col-sm-6.col-md-3.col-lg-3.branding
+                .portfolio-item
+                  .hover-bg
+                    a(href='../img/portfolio/06.jpg', title='Project description', rel='prettyPhoto')
+                      .hover-text
+                        h4 Project Title
+                        small Branding
+                        .clearfix
+                        i.fa.fa-search
+                      img.img-responsive(src='../img/portfolio/06.jpg', alt='Project Title')
+              .col-sm-6.col-md-3.col-lg-3.branding.app
+                .portfolio-item
+                  .hover-bg
+                    a(href='../img/portfolio/07.jpg', title='Project description', rel='prettyPhoto')
+                      .hover-text
+                        h4 Project Title
+                        small App Development, Branding
+                        .clearfix
+                        i.fa.fa-search
+                      img.img-responsive(src='../img/portfolio/07.jpg', alt='Project Title')
+              .col-sm-6.col-md-3.col-lg-3.web
+                .portfolio-item
+                  .hover-bg
+                    a(href='../img/portfolio/08.jpg', title='Project description', rel='prettyPhoto')
+                      .hover-text
+                        h4 Project Title
+                        small Web Design
+                        .clearfix
+                        i.fa.fa-search
+                      img.img-responsive(src='../img/portfolio/08.jpg', alt='Project Title')
+      // Skills Section
+      #skills.text-center
+        .container
+          .section-title.center
+            h2 My Skills
+            hr
+          .row
+            .col-md-4.col-sm-6.skill
+              span.chart(data-percent='95')
+                span.percent 95
+              h4 HTML5
+            .col-md-4.col-sm-6.skill
+              span.chart(data-percent='85')
+                span.percent 85
+              h4 CSS3
+            .col-md-4.col-sm-6.skill
+              span.chart(data-percent='80')
+                span.percent 80
+              h4 jQuery
+            .col-md-4.col-sm-6.skill
+              span.chart(data-percent='80')
+                span.percent 80
+              h4 WordPress
+            .col-md-4.col-sm-6.skill
+              span.chart(data-percent='70')
+                span.percent 70
+              h4 Photoshop
+            .col-md-4.col-sm-6.skill
+              span.chart(data-percent='65')
+                span.percent 65
+              h4 Illustrator
+      // Resume Section
+      #resume.text-center
+        .container
+          .section-title.center
+            h2 工作经历
+            hr
+          .row
+            .col-lg-12
+              ul.timeline
                 li
-                  input#brand1(type='checkbox', value='')
-                  label(for='brand1')
-                    span
-                    | 记住我
-              a(href='#') 忘记密码?
-              br
-              .clearfix
-              input(type='submit', value='Get Started')
-    // //popup for sign in form
-    // popup for sign up form
-    #myModal3.modal.video-modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModal2')
-      .modal-dialog(role='document')
-        .modal-content
-          #small-dialog2.mfp-hide.book-form
-            button.close(type='button', data-dismiss='modal', aria-label='Close')
-              span(aria-hidden='true') ×
-            h3 Sign Up
-            form(action='#', method='post')
-              input(type='text', name='Name', placeholder='Your Name', required='')
-              input.email(type='text', name='Email', placeholder='Email', required='')
-              input.password(type='password', name='Password', placeholder='Password', required='')
-              input.password(type='password', name='Password', placeholder='Confirm Password', required='')
-              input(type='submit', value='Register Now')
+                  .timeline-image
+                    h4
+                      | 2017-09
+                      br
+                      |                 -
+                      br
+                      |                 2018-06
+                  .timeline-panel
+                    .timeline-heading
+                      h4 北京零代码公司实习
+                      h4.subheading 实习生
+                    .timeline-body
+                      p
+                        | 调研大数据组件，大数据项目的落地实施，了解公司自己封装的大数据平台，及公司代理的ETL工具 trinity
+                li.timeline-inverted
+                  .timeline-image
+                    h4
+                      | 2018-7
+                      br
+                      |                 -
+                      br
+                      |                 至今
+                  .timeline-panel
+                    .timeline-heading
+                      h4 上海拓晶信息科技有限公司（后改名上海育研信息有限公司）
+                      h4.subheading 全栈开发工程师
+                    .timeline-body
+                      p
+                        | 创业公司，公司发展方向为物联网，因此项目经验中有部分项目为物联网项目，其他项目为外包项目
+        .container
+          .section-title.center
+            h2 教育
+            hr
+          .row
+            .col-lg-12
+              ul.timeline
+                // Education Section
+                li
+                  .timeline-image
+                    h4
+                      | 2014
+                      br
+                      |                 -
+                      br
+                      |                 2018
+                  .timeline-panel
+                    .timeline-heading
+                      h4 泰山学院
+                      h4.subheading 软件工程
+                    .timeline-body
+                      p
+                        |  泰山学院信息科技学院，学校实验室学习（帮助老师做一些立项等）。
+                li.timeline-inverted
+                  .timeline-image
+                    h4
+                      | 2017-06
+                      br
+                      |                 -
+                      br
+                      |                 2017-09
+                  .timeline-panel
+                    .timeline-heading
+                      h4 山东师创培训学习
+                      h4.subheading 软件开发
+                    .timeline-body
+                      p
+                        | 复习java基础，sql基础，spring框架，spring-boot框架，js基础等。
+                li
+                  .timeline-image
+                    h4
+                      | 2017-06
+                      br
+                      |                 -
+                      br
+                      |                 2019-09
+                  .timeline-panel
+                    .timeline-heading
+                      h4 大数据培训班
+                      h4.subheading 培训外的周六周天
+                    .timeline-body
+                      p.text-muted
+                        | 学习并了解大数据平台hadoop，数据ETL流程，hdfs，hbase，sqoop，flume等组件原理及使用
+      // Achievements Section
+      #achievements.section.dark-bg
+        .container
+          .section-title.center.text-center
+            h2 Some stats
+            hr
+          .row
+            .col-md-3.col-sm-3
+              .achievement-box
+                i.fa.fa-smile-o
+                span.count 120
+                h4 Happy clients
+            .col-md-3.col-sm-3
+              .achievement-box
+                i.fa.fa-code
+                span.count 4,600
+                h4 Working hours
+            .col-md-3.col-sm-3
+              .achievement-box
+                i.fa.fa-check-square-o
+                span.count 340
+                h4 Projects completed
+            .col-md-3.col-sm-3
+              .achievement-box
+                i.fa.fa-trophy
+                span.count 23
+                h4 Awards won
+      // Testimonials Section
+      #testimonials.text-center
+        .container
+          .section-title.center
+            h2 自我介绍
+            hr
+          .row
+            .col-md-8.col-md-offset-2
+              #testimonial.owl-carousel.owl-theme
+                .item
+                  img.img-circle(src='../img/clients/01.jpg', alt='')
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.
+                  p
+                    strong John DOE
+                    | , CEO, Company.
+                .item
+                  img.img-circle(src='../img/clients/02.jpg', alt='')
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.
+                  p
+                    strong Jenny DOE
+                    | , CEO, Company.
+                .item
+                  img.img-circle(src='../img/clients/03.jpg', alt='')
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.
+                  p
+                    strong John DOEn
+                    | , CEO, Company.
+      // Contact Section
+      #contact.text-center
+        .container
+          .section-title.center
+            h2 联系我
+            hr
+            p
+              | 谢谢您看到了这里，如有意向请打电话给我，或者留言，本人将第一时间回复
+          .col-md-8.col-md-offset-2
+            .col-md-4
+              i.fa.fa-map-marker.fa-2x
+              p
+                | 上海市闵行区古美西路899弄
+                br
+                |           鸿发家园
+            .col-md-4
+              i.fa.fa-envelope-o.fa-2x
+              p tsxylhs@outlook.com
+            .col-md-4
+              i.fa.fa-phone.fa-2x
+              p  18917952407
+            hr
+            .clearfix
+          .col-md-8.col-md-offset-2
+            h3 发消息联系我(本消息直接发短息给我对接阿里大于)
+            form#contactForm(name='sentMessage', novalidate='')
+              .row
+                .col-md-6
+                  .form-group
+                    input#name.form-control(type='text', placeholder='贵公司', required='required')
+                    p.help-block.text-danger
+                .col-md-6
+                  .form-group
+                    input#email.form-control(type='email', placeholder='邮箱', required='required')
+                    p.help-block.text-danger
+              .form-group
+                textarea#message.form-control(name='message', rows='4', placeholder='信息', required='')
+                p.help-block.text-danger
+              #success
+              button.btn.btn-default(type='submit') 发送
+      #footer
+        .container.text-center
+          .fnav
+            p
+              | 鲁ICP备 20010502号
 
 
 </template>

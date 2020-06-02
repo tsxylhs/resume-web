@@ -1,6 +1,6 @@
-# school-web
+# resume-web
 
-> A Vue.js project
+> 个人简历
 
 ## Build Setup
 
