@@ -4,8 +4,6 @@ import { Message } from 'element-ui'
 
 // create an axios instance
 const service = axios.create({
-  // baseURL: process.env.API_BASE, // api的base_url
-  // baseURL: 'http://api.fertile.com.hk/', // api的base_url
   baseURL: process.env.VUE_APP_API_BASE,
   withCredentials: true
 })

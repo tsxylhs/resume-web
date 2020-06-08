@@ -35,7 +35,7 @@
                 li
                   a.page-scroll(href='#resume') 工作经验
                 li
-                  a.page-scroll(href='#skills') 兴趣爱好
+                  a.page-scroll(href='#achievements') 业余工作
                 li
                   a.page-scroll(href='#testimonials') 自我介绍
                 li
@@ -192,7 +192,7 @@
                         i.fa.fa-search
                       img.img-responsive(src='../img/portfolio/08.jpg', alt='Project Title')
       // Skills Section
-      #skills.text-center
+      //#skills.text-center
         .container
           .section-title.center
             h2 My Skills
@@ -318,29 +318,19 @@
       #achievements.section.dark-bg
         .container
           .section-title.center.text-center
-            h2 Some stats
+            h2 我的博客/代码库
             hr
           .row
-            .col-md-3.col-sm-3
+            .col-md-6.col-sm-3
               .achievement-box
-                i.fa.fa-smile-o
-                span.count 120
-                h4 Happy clients
+                i.fa.fa-check-square-o
+                span.count
+                 a.count(src="https://www.cnblogs.com/tsxylhs/") 小小爱客
             .col-md-3.col-sm-3
               .achievement-box
                 i.fa.fa-code
-                span.count 4,600
-                h4 Working hours
-            .col-md-3.col-sm-3
-              .achievement-box
-                i.fa.fa-check-square-o
-                span.count 340
-                h4 Projects completed
-            .col-md-3.col-sm-3
-              .achievement-box
-                i.fa.fa-trophy
-                span.count 23
-                h4 Awards won
+                span.count
+                  a.count(src="https://www.cnblogs.com/tsxylhs/") github
       // Testimonials Section
       #testimonials.text-center
         .container
@@ -350,22 +340,7 @@
           .row
             .col-md-8.col-md-offset-2
               #testimonial.owl-carousel.owl-theme
-                .item
-                  img.img-circle(src='../img/clients/01.jpg', alt='')
-                  p
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.
-                  p
-                    strong John DOE
-                    | , CEO, Company.
-                .item
-                  img.img-circle(src='../img/clients/02.jpg', alt='')
-                  p
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.
-                  p
-                    strong Jenny DOE
-                    | , CEO, Company.
-                .item
-                  img.img-circle(src='../img/clients/03.jpg', alt='')
+                p 别说什么全栈工程师，哪些事在某一个领域精通后的横向拓展而已！
                   p
                     | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.
                   p
