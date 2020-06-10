@@ -15,3 +15,15 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+
+
+
+*.sw?
+

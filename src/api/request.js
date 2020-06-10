@@ -1,11 +1,10 @@
 import axios from 'axios'
-import { Message } from 'element-ui'
+
 // import { getToken } from '@/scripts/utils/auth'
 
 // create an axios instance
 const service = axios.create({
   // baseURL: process.env.API_BASE, // api的base_url
-  // baseURL: 'http://api.fertile.com.hk/', // api的base_url
   baseURL: process.env.VUE_APP_API_BASE,
   withCredentials: true
 })
