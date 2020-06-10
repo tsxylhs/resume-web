@@ -48,7 +48,7 @@
             hr
           .row
             .col-md-12.text-center
-              img.img-responsive(src='../img/about.jpg')
+              img.img-responsive(src='../../img/about.jpg')
             .col-md-8.col-md-offset-2
               .about-text
                 p
@@ -114,83 +114,83 @@
               .col-sm-6.col-md-3.col-lg-3.web
                 .portfolio-item
                   .hover-bg
-                    a(href='../img/portfolio/01.jpg', title='Project description', rel='prettyPhoto')
+                    a(href='../../img/portfolio/01.jpg', title='Project description', rel='prettyPhoto')
                       .hover-text
                         h4 Project Title
                         small Web Design
                         .clearfix
                         i.fa.fa-search
-                      img.img-responsive(src='../img/portfolio/01.jpg', alt='Project Title')
+                      img.img-responsive(src='../../img/portfolio/01.jpg', alt='Project Title')
               .col-sm-6.col-md-3.col-lg-3.app
                 .portfolio-item
                   .hover-bg
-                    a(href='../img/portfolio/02.jpg', title='Project description', rel='prettyPhoto')
+                    a(href='../../img/portfolio/02.jpg', title='Project description', rel='prettyPhoto')
                       .hover-text
                         h4 Project Title
                         small App Development
                         .clearfix
                         i.fa.fa-search
-                      img.img-responsive(src='../img/portfolio/02.jpg', alt='Project Title')
+                      img.img-responsive(src='../../img/portfolio/02.jpg', alt='Project Title')
               .col-sm-6.col-md-3.col-lg-3.web
                 .portfolio-item
                   .hover-bg
-                    a(href='../img/portfolio/03.jpg', title='Project description', rel='prettyPhoto')
+                    a(href='../../img/portfolio/03.jpg', title='Project description', rel='prettyPhoto')
                       .hover-text
                         h4 Project Title
                         small Web Design
                         .clearfix
                         i.fa.fa-search
-                      img.img-responsive(src='../img/portfolio/03.jpg', alt='Project Title')
+                      img.img-responsive(src='../../img/portfolio/03.jpg', alt='Project Title')
               .col-sm-6.col-md-3.col-lg-3.web
                 .portfolio-item
                   .hover-bg
-                    a(href='../img/portfolio/04.jpg', title='Project description', rel='prettyPhoto')
+                    a(href='../../img/portfolio/04.jpg', title='Project description', rel='prettyPhoto')
                       .hover-text
                         h4 Project Title
                         small Web Design
                         .clearfix
                         i.fa.fa-search
-                      img.img-responsive(src='../img/portfolio/04.jpg', alt='Project Title')
+                      img.img-responsive(src='../../img/portfolio/04.jpg', alt='Project Title')
               .col-sm-6.col-md-3.col-lg-3.app
                 .portfolio-item
                   .hover-bg
-                    a(href='../img/portfolio/05.jpg', title='Project description', rel='prettyPhoto')
+                    a(href='../../img/portfolio/05.jpg', title='Project description', rel='prettyPhoto')
                       .hover-text
                         h4 Project Title
                         small App Development
                         .clearfix
                         i.fa.fa-search
-                      img.img-responsive(src='../img/portfolio/05.jpg', alt='Project Title')
+                      img.img-responsive(src='../../img/portfolio/05.jpg', alt='Project Title')
               .col-sm-6.col-md-3.col-lg-3.branding
                 .portfolio-item
                   .hover-bg
-                    a(href='../img/portfolio/06.jpg', title='Project description', rel='prettyPhoto')
+                    a(href='../../img/portfolio/06.jpg', title='Project description', rel='prettyPhoto')
                       .hover-text
                         h4 Project Title
                         small Branding
                         .clearfix
                         i.fa.fa-search
-                      img.img-responsive(src='../img/portfolio/06.jpg', alt='Project Title')
+                      img.img-responsive(src='../../img/portfolio/06.jpg', alt='Project Title')
               .col-sm-6.col-md-3.col-lg-3.branding.app
                 .portfolio-item
                   .hover-bg
-                    a(href='../img/portfolio/07.jpg', title='Project description', rel='prettyPhoto')
+                    a(href='../../img/portfolio/07.jpg', title='Project description', rel='prettyPhoto')
                       .hover-text
                         h4 Project Title
                         small App Development, Branding
                         .clearfix
                         i.fa.fa-search
-                      img.img-responsive(src='../img/portfolio/07.jpg', alt='Project Title')
+                      img.img-responsive(src='../../img/portfolio/07.jpg', alt='Project Title')
               .col-sm-6.col-md-3.col-lg-3.web
                 .portfolio-item
                   .hover-bg
-                    a(href='../img/portfolio/08.jpg', title='Project description', rel='prettyPhoto')
+                    a(href='../../img/portfolio/08.jpg', title='Project description', rel='prettyPhoto')
                       .hover-text
                         h4 Project Title
                         small Web Design
                         .clearfix
                         i.fa.fa-search
-                      img.img-responsive(src='../img/portfolio/08.jpg', alt='Project Title')
+                      img.img-responsive(src='../../img/portfolio/08.jpg', alt='Project Title')
       // Skills Section
       //#skills.text-center
         .container
@@ -321,16 +321,21 @@
             h2 我的博客/代码库
             hr
           .row
-            .col-md-6.col-sm-3
+            .col-md-4.col-sm-3
               .achievement-box
                 i.fa.fa-check-square-o
                 span.count
                  a.count(src="https://www.cnblogs.com/tsxylhs/") 小小爱客
-            .col-md-3.col-sm-3
+            .col-md-4.col-sm-3
               .achievement-box
                 i.fa.fa-code
                 span.count
                   a.count(src="https://www.cnblogs.com/tsxylhs/") github
+            .col-md-4.col-sm-3
+              .achievement-box
+                  i.fa.fa-code
+                  span.count
+                      a.count(src="http://code.lncios.cn/") 个人代码库
       // Testimonials Section
       #testimonials.text-center
         .container
