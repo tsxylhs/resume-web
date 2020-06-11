@@ -4,7 +4,6 @@
       .row
         .col-6
           .pt-5.df-row-ac(style="padding-left: 15%;")
-            .logo
             span.mx-3 |
             span.pf-subhead 个人简历后台管理系统
           el-form.login-form.w-80.login-inner(autocomplete='on', :model='loginForm', :rules='loginRules', ref='loginForm' label-position='left')

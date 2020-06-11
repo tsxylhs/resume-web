@@ -2,7 +2,6 @@
   html
     head
     body#page-top(data-spy='scroll', data-target='.navbar-fixed-top')
-      // Header
       header.intro
         .intro-body
           .container
