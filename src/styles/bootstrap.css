@@ -1601,6 +1601,7 @@ pre code {
   margin-left: auto;
 }
 .row {
+
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -6579,3 +6580,8 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.col-6 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}

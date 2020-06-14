@@ -8,7 +8,7 @@
             .row
               .intro-text
                 h1 你好, 我是吕厚帅
-                p 全栈工程师 & 大学本科（统招，学信网可查）
+                p 全栈工程师 & 大学本科（软件工程，统招，学信网可查）
                 a.btn.btn-default.btn-lg.page-scroll(href='#about') 关于我
                 a.btn.btn-default.btn-lg.page-scroll(href='#portfolio') 我的项目经验
       // Navigation

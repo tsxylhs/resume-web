@@ -1,4 +1,3 @@
-@import 'buttons.scss';
 @import 'variables.scss';
 @import 'typography.scss';
 
@@ -8,6 +7,7 @@ $border-solid-black: solid $color-black-lighten-2;
 body {
   margin: 0;
   padding: 0;
+
   font-family: $font-family-base;
   font-size: $main-font-size;
   -webkit-font-smoothing: antialiased;
@@ -142,7 +142,10 @@ a.primary,
   display: inline-block;
   text-align: left;
 }
+.fa-csdn-o{
 
+  background-image: url(../img/frist3.jpg);
+}
 .display-5 {
   font-size: 1.2rem;
   font-weight: bolder;
@@ -240,6 +243,7 @@ table th {
   list-style: none !important;
   padding-inline-start: 30px !important;
 }
+
 .login {
   width: 530px;
   height: 520px;
