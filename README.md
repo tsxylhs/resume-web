@@ -1,7 +1,7 @@
 # resume-web
 
 > 个人简历
-
+> vue 多页面实现简历展示，简历后台管理等功能
 ## Build Setup
 
 ``` bash
