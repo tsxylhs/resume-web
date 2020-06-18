@@ -1,5 +1,4 @@
 import moment from 'moment'
-import dict from './dict'
 
 let Filters = {}
 Filters.defaultString = function(str, defStr) {

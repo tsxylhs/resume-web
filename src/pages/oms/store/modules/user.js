@@ -22,6 +22,7 @@ const user = {
 
   mutations: {
     SET_ROLES: (state, roles) => {
+        debugger
       console.log('roles', JSON.stringify(roles))
       let permissions = {}
       if (roles) {
@@ -69,20 +70,13 @@ const user = {
         API.app
           .login(userInfo)
           .then(response => {
-              debugger
-            console.log('response', response)
-            let user = response.data.data
+           debugger
+            let user = response.data
             console.log('login user', user)
-            setNickName(user.nickname)
             setUserName(user.username)
             setUid(user.id)
             Cookies.set('userMobile', user.mobile)
             commit('SET_USER', user)
-            console.log(
-              'response.data.data.permissions',
-              response.data.data.permissions
-            )
-            console.log('login succeeded')
             resolve()
           })
           .catch(error => {
@@ -99,12 +93,10 @@ const user = {
           .getInfo()
           .then(res => {
             debugger
-            let user = res.data.data
-            console.log('get user permissions:', user.permissions)
+            let user = res.data
             // commit('SET_PERMISSIONS', user.permissions || [])
             commit('SET_USER', user)
             commit('SET_ROLES', user.roles)
-            commit('SET_NAME', user.nickname)
             resolve(state.permissions)
           })
           .catch(err => {
